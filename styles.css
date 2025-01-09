@@ -1,0 +1,249 @@
+:root {
+    --sakura-pink: #ff7da0;
+    --sakura-light: #ffe2ec;
+    --text-dark: #2c0000;
+    --footer-bg: #1a0e0e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+    background-color: var(--sakura-light);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    cursor: url('images/sakura_cursor.svg') 16 16, auto;
+}
+
+nav {
+    background-color: var(--sakura-pink);
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 2.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: url('images/cat_pointer.svg') 16 8, auto;
+}
+
+nav a:hover {
+    color: var(--text-dark);
+    background-color: #fc4475;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 0;
+    flex: 1;
+}
+
+.hero h1 {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 3.2rem !important;
+    color: var(--text-dark);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.mascot {
+    text-align: center;
+    padding: 2rem 0;
+    flex: 1;
+}
+
+#mascot {
+    width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+    cursor: url('images/pet_hand.svg'), auto;
+}
+
+.mascot span {
+    font-family: 'Mali', cursive;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+    .neko-image {
+        width: 220px;
+    }
+}
+
+.meow{
+    font-family: 'Mali', cursive;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin: 1rem;
+}
+
+.footer-section h3 {
+    font-family: 'Mali', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.github-link i {
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+
+.github-link:hover i {
+    transform: scale(1.1);
+    color: white;
+}
+
+#title {
+    font-size: 3.6rem;
+    font-weight: 300;
+    word-spacing: 15px;
+    margin-bottom: 1rem;
+}
+
+.start-learning {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.start-button {
+    background-color: var(--sakura-pink);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: url('images/cat_pointer.svg') 16 8, auto;
+    transition: 0.3s ease;
+}
+
+.start-button:hover {
+    transform: rotate(5deg);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 1rem;
+    font-family: 'Cherry Bomb One', cursive;
+}
+
+footer a {
+    color: var(--sakura-pink);
+    text-decoration: none;
+    cursor: url('images/cat_pointer.svg') 32 32, auto;
+}
+
+.github-link {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    display: inline-block;
+    cursor: url('images/cat_pointer.svg') 32 32, auto;
+}
+
+#petal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.sakura-petal {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: var(--sakura-pink);
+    clip-path: circle(50% at 50% 50%);
+    animation: falling 10s linear infinite;
+}
+
+.vertical-divider {
+    display: none;
+    width: 4px;
+    height: 400px;
+    background-color: var(--sakura-pink);
+    margin: 0 2rem;
+    border-radius: 1px;
+}
+
+@media screen and (min-width: 768px) {
+    .content-wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .vertical-divider {
+        display: block;
+    }
+
+    .hero, .mascot {
+        padding: 2rem;
+    }
+}

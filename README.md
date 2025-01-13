@@ -1,5 +1,5 @@
 # Neko: Japanese notes because I need
-put a banner here :3
+![logo](images/banner-neko.png)
 
 So its almost Japanese exam, and I feel kinda cooked ngl. I just started learning like 10 months ago but I still can't... Japanese. Well, so I guess why not create a note website?
 

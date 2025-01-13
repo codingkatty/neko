@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const mascot = document.getElementById("mascot");
 
     mascot.addEventListener("mouseover", function() {
-        this.src = "images/neko2.png";
+        this.src = "images/neko2.PNG";
     });
 
     mascot.addEventListener("mouseout", function() {
-        this.src = "images/neko1.png";
+        this.src = "images/neko1.PNG";
     });
 
     mascot.addEventListener("click", function() {

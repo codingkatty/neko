@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neko</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="petal"></div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Catio</a></li>
+            <li><a href="../notes.html">Notes</a></li>
+            <li><a href="../soundboard.html">Soundboard</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="notes">
+            <button id="pdf-button">Save as PDF <i class="fa-solid fa-download"></i></button>
+            <h2>Countries</h2>
+            <p>
+                Countries, <span>くに</span>(kuni) or 国 are a pretty crucial aspect of learning Japanese.
+                Most learn Japanese to travel to Japan, so it's important to know the names of the countries in Japanese.
+                In this note, we will see the names of some countries in Japanese and how to say "from" a country.
+            </p>
+            <img src="../images/japanese_countries.jpg">
+            <br>
+            <h2>List of Countries and Pronounciation</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Japanese</th>
+                        <th>Pronounciation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Japan</td>
+                        <td>日本</td>
+                        <td>にほん (Nihon)</td>
+                    </tr>
+                    <tr>
+                        <td>China</td>
+                        <td>中国</td>
+                        <td>ちゅうごく (Chuugoku)</td>
+                    </tr>
+                    <tr>
+                        <td>South Korea</td>
+                        <td>韓国</td>
+                        <td>かんこく (Kankoku)</td>
+                    </tr>
+                    <tr>
+                        <td>United States</td>
+                        <td>アメリカ</td>
+                        <td>あめりか (Amerika)</td>
+                    </tr>
+                    <tr>
+                        <td>Canada</td>
+                        <td>カナダ</td>
+                        <td>かなだ (Kanada)</td>
+                    </tr>
+                    <tr>
+                        <td>France</td>
+                        <td>フランス</td>
+                        <td>ふらんす (Furansu)</td>
+                    </tr>
+                    <tr>
+                        <td>Germany</td>
+                        <td>ドイツ</td>
+                        <td>どいつ (Doitsu)</td>
+                    </tr>
+                    <tr>
+                        <td>Italy</td>
+                        <td>イタリア</td>
+                        <td>いたりあ (Itaria)</td>
+                    </tr>
+                    <tr>
+                        <td>Spain</td>
+                        <td>スペイン</td>
+                        <td>すぺいん (Supein)</td>
+                    </tr>
+                    <tr>
+                        <td>United Kingdom</td>
+                        <td>イギリス</td>
+                        <td>いぎりす (Igirisu)</td>
+                    </tr>
+                    <tr>
+                        <td>India</td>
+                        <td>インド</td>
+                        <td>いんど (Indo)</td>
+                    </tr>
+                    <tr>
+                        <td>Australia</td>
+                        <td>オーストラリア</td>
+                        <td>おーすとらりあ (Oosutoraria)</td>
+                    </tr>
+                    <tr>
+                        <td>Brazil</td>
+                        <td>ブラジル</td>
+                        <td>ぶらじる (Burajiru)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h2>Conversation</h2>
+            <p>
+                Ending with <span>じん</span>(jin) or 人: Nationality
+                <br>
+                For example, <span>にほんじん</span> (日本人) means Japanese.
+                <br><br>
+                Ending with <span>ご</span>(go): Language
+                <br>
+                For example, <span>にほんご</span> (日本語) means Japanese language.
+            </p>
+            <hr>
+            <h2>Talking about countries</h2>
+            <p>
+                To say you are from a country, you can use the following sentence structure:
+                <br><br>
+                <div style="border: 2px solid rgb(62, 2, 2); padding: 20px;">
+                    [Country] <span>から きました</span><br>
+                    [Country] kara kimashita
+                </div>
+                <br>
+                For example, <span>にほん から きました</span> means "I came from Japan".
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../notes.html">Study Notes</a></li>
+                    <li><a href="../soundboard.html">Sound Effects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="https://github.com/codingkatty/neko" class="github-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Created by Candy 2025</p>
+        </div>
+    </footer>
+
+    <script src="../notes.js"></script>
+    <script>
+        let pdfButton = document.getElementById("pdf-button");
+
+        pdfButton.addEventListener("click", function () {
+            let path = document.location.pathname.split('/').slice(-2).join('/');
+            let note = notesList.find(note => note.file === path);
+            window.open("/" + note.pdf, "_blank");
+        });
+    </script>
+</body>
+
+</html>

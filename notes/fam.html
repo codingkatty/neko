@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neko</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="petal"></div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Catio</a></li>
+            <li><a href="../notes.html">Notes</a></li>
+            <li><a href="../soundboard.html">Soundboard</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="notes">
+            <button id="pdf-button">Save as PDF <i class="fa-solid fa-download"></i></button>
+            <h2>Family Members</h2>
+            <p>
+                This note would be about family members in Japanese. Then I'll add notes on how to create sentences with family members in them.
+            </p>
+            <br>
+            <h2>Humble (Own Family)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Family Member</th>
+                        <th>Japanese</th>
+                        <th>Pronounciation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mother</td>
+                        <td>母</td>
+                        <td>はは (Haha)</td>
+                    </tr>
+                    <tr>
+                        <td>Father</td>
+                        <td>父</td>
+                        <td>ちち (Chichi)</td>
+                    </tr>
+                    <tr>
+                        <td>Older Brother</td>
+                        <td>兄</td>
+                        <td>あに (Ani)</td>
+                    </tr>
+                    <tr>
+                        <td>Older Sister</td>
+                        <td>姉</td>
+                        <td>あね (Ane)</td>
+                    </tr>
+                    <tr>
+                        <td>Younger Brother</td>
+                        <td>弟</td>
+                        <td>おとうと (Otouto)</td>
+                    </tr>
+                    <tr>
+                        <td>Younger Sister</td>
+                        <td>妹</td>
+                        <td>いもうと (Imouto)</td>
+                    </tr>
+            </table>
+            <img src="../images/japanese_family.jpg">
+            <br>
+            <h2>Polite (Other's Family)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Family Member</th>
+                        <th>Japanese</th>
+                        <th>Pronounciation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mother</td>
+                        <td>お母さん</td>
+                        <td>おかあさん (Okaasan)</td>
+                    </tr>
+                    <tr>
+                        <td>Father</td>
+                        <td>お父さん</td>
+                        <td>おとうさん (Otousan)</td>
+                    </tr>
+                    <tr>
+                        <td>Older Brother</td>
+                        <td>お兄さん</td>
+                        <td>おにいさん (Oniisan)</td>
+                    </tr>
+                    <tr>
+                        <td>Older Sister</td>
+                        <td>お姉さん</td>
+                        <td>おねえさん (Oneesan)</td>
+                    </tr>
+                    <tr>
+                        <td>Younger Brother</td>
+                        <td>弟さん</td>
+                        <td>おとうとさん (Otoutosan)</td>
+                    </tr>
+                    <tr>
+                        <td>Younger Sister</td>
+                        <td>妹さん</td>
+                        <td>いもうとさん (Imoutosan)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>*<span>さん</span>(san) is put at end of names to be polite.</p>
+            <br>
+            <h2>Example Sentences</h2>
+            <p>
+                <div style="border: 2px solid rgb(62, 2, 2); padding: 20px;">
+                    <span>おはようございます はは こちらは ルーシー のおとうとさんです。</span><br>
+                    Good morning, mom. This is Lucy's younger brother.
+                </div>
+                <br>
+                <span>おはようございます</span> = Good morning / ohayougozaimasu<br>
+                <span>はは</span> = Mother / haha<br>
+                <span>こちら</span> = This / kochira<br>
+                <span>ルーシー</span> = Lucy / ruushi<br>
+                <span>の</span> = 's / no<br>
+                <span>おとうとさん</span> = Younger Brother / otoutosan<br>
+                <span>です</span> = is / desu
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../notes.html">Study Notes</a></li>
+                    <li><a href="../soundboard.html">Sound Effects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="https://github.com/codingkatty/neko" class="github-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Created by Candy 2025</p>
+        </div>
+    </footer>
+
+    <script src="../notes.js"></script>
+    <script>
+        let pdfButton = document.getElementById("pdf-button");
+
+        pdfButton.addEventListener("click", function () {
+            let path = document.location.pathname.split('/').slice(-2).join('/');
+            let note = notesList.find(note => note.file === path);
+            window.open("/" + note.pdf, "_blank");
+        });
+    </script>
+</body>
+
+</html>

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("pet-mascot").innerText = timesPet;
     });
 
-    particlesJS("particles-js", {
+    particlesJS("petal", {
         "particles": {
             "number": {
                 "value": 50,

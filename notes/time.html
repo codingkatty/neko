@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neko</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="petal"></div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Catio</a></li>
+            <li><a href="../notes.html">Notes</a></li>
+            <li><a href="../soundboard.html">Soundboard</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="notes">
+            <button id="pdf-button">Save as PDF <i class="fa-solid fa-download"></i></button>
+            <h2>Time</h2>
+            <p>In this note, I'll add how to talk about time.</p>
+            <br>
+            <h2>Clock</h2>
+            <p>
+                To talk about time, use the following words:<br><br>
+                <div style="border: 2px solid rgb(62, 2, 2); padding: 20px;">
+                    <span>じ</span> (ji) - Hour<br>
+                    <span>ふん</span> (fun) - Minute<br>
+                    <span>ごご</span> (gogo) - PM<br>
+                    <span>ごぜん</span> (gozen) - AM
+                </div>
+                *Note that if written in hiragana, 4 o'clock should be written as <span>よじ</span>(yoji)
+            </p>
+            <br>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
+                <div id="clock">
+                    <div id="hour-hand"></div>
+                    <div id="minute-hand"></div>
+                    <div id="second-hand"></div>
+                </div>
+                <p id="time"></p>
+            </div>
+            <hr>
+            <h2>Day</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>English</th>
+                        <th>Japanese</th>
+                        <th>Pronounciation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>げつようび</td>
+                        <td>getsuyoubi</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>かようび</td>
+                        <td>kayoubi</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>すいようび</td>
+                        <td>suiyoubi</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>もくようび</td>
+                        <td>mokuyoubi</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>きんようび</td>
+                        <td>kinyoubi</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>どようび</td>
+                        <td>doyoubi</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>にちようび</td>
+                        <td>nichiyoubi</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <p>
+                Example of sentence would be:<br><br>
+                <div style="border: 2px solid rgb(62, 2, 2); padding: 20px;">
+                    <span>きょうは げつようびです。</span><br>
+                    kyou wa getsuyoubi desu.<br><br>
+                    Today is Monday.
+                </div>
+            </p>
+            <br>
+            <h2>Date</h2>
+            <p>
+                To talk about date, use the following words:<br><br>
+                <div style="border: 2px solid rgb(62, 2, 2); padding: 20px;">
+                    <span>にち</span> (nichi) - Day<br>
+                    <span>がつ</span> (gatsu) - Month<br>
+                    <span>ねん</span> (nen) - Year
+                </div>
+                <br>
+                Special dates:<br><br>
+                <div style="border: 2px solid rgb(62, 2, 2); padding: 20px;">
+                    <span>ついたち</span> (tsuitachi) - 1st<br>
+                    <span>ふつか</span> (futsuka) - 2nd<br>
+                    <span>みっか</span> (mikka) - 3rd<br>
+                    <span>よっか</span> (yokka) - 4th<br>
+                    <span>いつか</span> (itsuka) - 5th<br>
+                    etc..
+                </div>
+                <br>
+                For example, (try input something below)<br><br>
+                <input type="date" id="date-input">
+                <p id="date"></p>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../notes.html">Study Notes</a></li>
+                    <li><a href="../soundboard.html">Sound Effects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="https://github.com/codingkatty/neko" class="github-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Created by Candy 2025</p>
+        </div>
+    </footer>
+
+    <script src="../notes.js"></script>
+    <script>
+        let pdfButton = document.getElementById("pdf-button");
+
+        pdfButton.addEventListener("click", function () {
+            let path = document.location.pathname.split('/').slice(-2).join('/');
+            let note = notesList.find(note => note.file === path);
+            window.open("/" + note.pdf, "_blank");
+        });
+    </script>
+    <script>
+        let time = document.getElementById("time");
+        let hourHand = document.getElementById("hour-hand");
+        let minuteHand = document.getElementById("minute-hand");
+        let secondHand = document.getElementById("second-hand");
+
+        function rotateHands() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            let hour12 = hours > 12 ? hours - 12 : hours;
+            let minuteFull = minutes < 10 ? "0" + minutes : minutes;
+
+            let hourDeg = (hours * 30) + (0.5 * minutes);
+            let minuteDeg = minutes * 6;
+            let secondDeg = seconds * 6;
+
+            hourHand.style.transform = `rotate(${hourDeg}deg)`;
+            minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+            secondHand.style.transform = `rotate(${secondDeg}deg)`;
+
+            time.innerHTML = `${hour12} <span>じ</span> ${minuteFull} <span>ふん</span> ${hours >= 12 ? "<span>ごご</span>" : "<span>ごぜん</span>"} (${hour12}:${minuteFull} ${hours >= 12 ? "PM" : "AM"})`;
+        }
+
+        setInterval(rotateHands, 1000);
+    </script>
+    <script>
+        document.getElementById("date-input").addEventListener("change", function () {
+            let date = new Date(this.value);
+            let day = date.getDate();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear();
+
+            let specialDates = ["ついたち", "ふつか", "みっか", "よっか", "いつか", "むいか", "なのか", "ようか", "ここのか", "とおか", "じゅういちにち", "じゅうににち", "じゅうさんにち", "じゅうよっか", "じゅうごにち", "じゅうろくにち", "じゅうしちにち", "じゅうはちにち", "じゅうきゅうにち", "はつか", "にじゅういちにち", "にじゅうににち", "にじゅうさんにち", "にじゅうよっか", "にじゅうごにち", "にじゅうろくにち", "にじゅうしちにち", "にじゅうはちにち", "にじゅうきゅうにち", "さんじゅうにち", "さんじゅういちにち"];
+            let specialDate = specialDates[day - 1] || day;
+
+            document.getElementById("date").innerHTML = `${year} <span>ねん</span> ${month} <span>がつ</span> ${specialDate} <span>にち</span> (${year}年${month}月${day}日)`;
+        });
+    </script>
+</body>
+
+</html>

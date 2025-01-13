@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neko</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Catio</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="soundboard.html">Soundboard</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="notes-wrapper"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="notes.html">Study Notes</a></li>
+                    <li><a href="soundboard.html">Sound Effects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="https://github.com/codingkatty/neko" class="github-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Created by Candy 2025</p>
+        </div>
+    </footer>
+
+    <script src="notes.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let notesContainer = document.getElementById("notes-wrapper");
+
+            notesList.forEach(element => {
+                let note = document.createElement("div");
+                note.classList.add("notes");
+                note.innerHTML = `<h2>${element.title}</h2><p>${element.desc}</p>`;
+                notesContainer.appendChild(note);
+
+                let button = document.createElement("button");
+                button.innerHTML = "Open";
+                button.classList.add("note-button");
+                button.style.display = "none";
+                note.appendChild(button);
+
+                button.addEventListener("click", function () {
+                    window.open(element.file, "_self");
+                });
+
+                note.addEventListener("mouseenter", function () {
+                    button.style.display = "block";
+                });
+
+                note.addEventListener("mouseleave", function () {
+                    if (note.classList.contains("notes")) {
+                        button.style.display = "none";
+                    }
+                });
+            });
+
+            if (notesContainer.firstElementChild) {
+                notesContainer.firstElementChild.classList.remove("notes");
+                const firstButton = notesContainer.firstElementChild.querySelector("button");
+                if (firstButton) {
+                    firstButton.style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

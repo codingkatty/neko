@@ -7,7 +7,7 @@ So its almost Japanese exam, and I feel kinda cooked ngl. I just started learnin
 Feel free to contribute to this awesome learning page! It is very easy to do so.
 
 ### What you'll need
-To contribute, you simply need to prepare a topic, a PDF is applicable and just duplicate the existing notes and start editing! The notes are pre styled, but feel free to add your own touch of flavour! For scripts, feel free to add interactive elements too, they are pretty cool.
+To contribute, you simply need to prepare a topic, a PDF is applicable and just duplicate one of the existing notes and start editing! The notes are pre styled, but feel free to add your own touch of flavour! For scripts, feel free to add interactive elements too, they are pretty cool.
 
 ```
 notes/
@@ -16,6 +16,12 @@ pdf/
   └── yournote.pdf
 ```
 
-Then, edit the links at `line idkdothestufffirst`.
+Then, add your note information & links at `notesList` in the `note.js` file.
 
 ## Tech Stack
+![HTML](https://img.shields.io/badge/HTML-orange?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white)
+
+## Acknowledgements
+Partially used AI for the notes part and images are from online <3
